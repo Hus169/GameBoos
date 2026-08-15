@@ -66,12 +66,17 @@ jobs:
           ])
           for key, value in data.get('sdkInfo', {}).items():
               lines.append(f"  {key}: {emit_scalar(value)}")
+          def emit_integer(value):
+              if value is None:
+                  return 'null'
+              return str(int(value))
+
           lines.extend([
               'packageInfo:',
-              f"  forcedPackageId: {emit_scalar(data.get('PackageInfo', {}).get('forcedPackageId'))}",
+              f"  forcedPackageId: {emit_integer(data.get('PackageInfo', {}).get('forcedPackageId'))}",
               f"  renameManifestPackage: {emit_scalar(data.get('PackageInfo', {}).get('renameManifestPackage'))}",
               'versionInfo:',
-              f"  versionCode: {emit_scalar(data.get('VersionInfo', {}).get('versionCode'))}",
+              f"  versionCode: {emit_integer(data.get('VersionInfo', {}).get('versionCode'))}",
               f"  versionName: {emit_scalar(data.get('VersionInfo', {}).get('versionName'))}",
               f"resourcesAreCompressed: {emit_scalar(data.get('compressionType', False))}",
               f"sharedLibrary: {emit_scalar(data.get('sharedLibrary', False))}",
