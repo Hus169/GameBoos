@@ -802,6 +802,16 @@
     .line 101
     div-float/2addr v1, v5
 
+    # Manual reticle offset: +100 px to the right, -50 px upward from screen center.
+    # Adjust these constants to reposition the crosshair while keeping the overlay sizing logic intact.
+    const/high16 v5, 0x42c80000    # 100.0f
+
+    add-float/2addr v4, v5
+
+    const/high16 v5, 0x42480000    # 50.0f
+
+    sub-float/2addr v1, v5
+
     .line 102
     iget-object v5, p0, Lg5/h;->k:Li5/g;
 
