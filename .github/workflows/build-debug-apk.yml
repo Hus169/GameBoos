@@ -22,7 +22,7 @@ jobs:
           APKTOOL_VERSION: '3.0.3'
         run: |
           sudo apt-get update
-          sudo apt-get install -y apksigner
+          sudo apt-get install -y apksigner zipalign
           curl -L --fail --retry 3 \
             -o apktool.jar \
             "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar"
@@ -66,12 +66,17 @@ jobs:
           ])
           for key, value in data.get('sdkInfo', {}).items():
               lines.append(f"  {key}: {emit_scalar(value)}")
+          def emit_integer(value):
+              if value is None:
+                  return 'null'
+              return str(int(value))
+
           lines.extend([
               'packageInfo:',
-              f"  forcedPackageId: {emit_scalar(data.get('PackageInfo', {}).get('forcedPackageId'))}",
+              f"  forcedPackageId: {emit_integer(data.get('PackageInfo', {}).get('forcedPackageId'))}",
               f"  renameManifestPackage: {emit_scalar(data.get('PackageInfo', {}).get('renameManifestPackage'))}",
               'versionInfo:',
-              f"  versionCode: {emit_scalar(data.get('VersionInfo', {}).get('versionCode'))}",
+              f"  versionCode: {emit_integer(data.get('VersionInfo', {}).get('versionCode'))}",
               f"  versionName: {emit_scalar(data.get('VersionInfo', {}).get('versionName'))}",
               f"resourcesAreCompressed: {emit_scalar(data.get('compressionType', False))}",
               f"sharedLibrary: {emit_scalar(data.get('sharedLibrary', False))}",
@@ -100,24 +105,22 @@ jobs:
             -validity 10000 \
             -dname "CN=Android Debug,O=Android,C=US"
 
-      - name: Sign debug APK
+      - name: Align and sign debug APK
         run: |
+          zipalign -p -f 4 build/GameBoos-debug-unsigned.apk build/GameBoos-debug-aligned.apk
           apksigner sign \
             --ks build/debug.keystore \
             --ks-pass pass:android \
             --key-pass pass:android \
+            --v1-signing-enabled true \
+            --v2-signing-enabled true \
+            --v3-signing-enabled true \
             --out build/GameBoos-debug.apk \
-            build/GameBoos-debug-unsigned.apk
-          apksigner verify --verbose build/GameBoos-debug.apk
+            build/GameBoos-debug-aligned.apk
+          apksigner verify --verbose --print-certs build/GameBoos-debug.apk
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: CrosshairOverlay-debug-apk
+          name: GameBoos-debug-apk
           path: build/GameBoos-debug.apk
-
-      - name: Upload original signature reference
-        uses: actions/upload-artifact@v4
-        with:
-          name: original-samsung-signature-reference
-          path: build/original-signature/
