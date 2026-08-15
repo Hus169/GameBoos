@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@drawable/selector_reticle_shape_item"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="64.0dip"
+    android:layout_height="64.0dip"
+    android:layout_margin="6.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.samsung.android.game.honeyplayplus.aim.ui.ReticleIconView
+        android:layout_gravity="center"
+        android:id="@id/reticle_icon_view"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:tint="@color/hpp_reticle_icon_color"
+        android:contentDescription="@string/reticle_shape_selection" />
+    <View
+        android:id="@id/v_selection_overlay"
+        android:background="@drawable/bg_reticle_shape_selected"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/nav_graph"
+    app:startDestination="@id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:label="Main"
+        android:name="com.samsung.android.game.honeyplayplus.main.ui.MainFragment"
+        android:id="@id/main">
+        <action
+            android:id="@id/action_main_to_category_change"
+            app:destination="@id/category_change" />
+        <action
+            android:id="@id/action_main_to_gamepad_mapping"
+            app:destination="@id/paired_game_pads" />
+        <action
+            android:id="@id/action_main_to_gpu_settings"
+            app:destination="@id/gpu_settings" />
+        <action
+            android:id="@id/action_main_to_credits"
+            app:destination="@id/credits" />
+        <action
+            android:id="@id/action_permission_notice_to_main"
+            app:destination="@id/permission_notice" />
+        <action
+            android:id="@id/action_main_to_aim_assist"
+            app:destination="@id/aim_assist" />
+        <action
+            android:id="@id/action_main_to_installed_games"
+            app:destination="@id/installedGamesFragment" />
+        <action
+            android:id="@id/action_introfastforward"
+            app:destination="@id/introfastforwardFragment" />
+        <action
+            android:id="@id/action_main_to_app_permissions"
+            app:destination="@id/app_permissions" />
+    </fragment>
+    <fragment
+        android:label="CategoryChange"
+        android:name="com.samsung.android.game.honeyplayplus.category.ui.CategoryChangeFragment"
+        android:id="@id/category_change" />
+    <fragment
+        android:label="PairedGamePadList"
+        android:name="com.samsung.android.game.honeyplayplus.gamepad.ui.PairedGamePadsFragment"
+        android:id="@id/paired_game_pads">
+        <action
+            android:id="@id/action_paired_game_pads_to_pad_detail"
+            app:destination="@id/pad_detail" />
+        <action
+            android:id="@id/action_paired_game_pads_to_edit_profile"
+            app:destination="@id/edit_profile" />
+    </fragment>
+    <fragment
+        android:label="GpuSettings"
+        android:name="com.samsung.android.game.honeyplayplus.gpusetting.ui.GpuSettingsFragment"
+        android:id="@id/gpu_settings" />
+    <fragment
+        android:label="EditPRofile"
+        android:name="com.samsung.android.game.honeyplayplus.gamepad.remapping.ui.EditProfileFragment"
+        android:id="@id/edit_profile">
+        <action
+            android:id="@id/action_edit_profile_to_pad_detail"
+            app:destination="@id/pad_detail" />
+    </fragment>
+    <fragment
+        android:label="HoneyPlayPlusCredits"
+        android:name="com.samsung.android.game.honeyplayplus.main.ui.CreditsFragment"
+        android:id="@id/credits">
+        <action
+            android:id="@id/action_license"
+            app:destination="@id/license" />
+    </fragment>
+    <fragment
+        android:label="PadDetail"
+        android:name="com.samsung.android.game.honeyplayplus.gamepad.remapping.ui.PadDetailFragment"
+        android:id="@id/pad_detail">
+        <action
+            android:id="@id/action_pad_detail_to_paired_game_pads"
+            app:destination="@id/paired_game_pads"
+            app:popUpTo="@id/paired_game_pads"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:label="License"
+        android:name="com.samsung.android.game.honeyplayplus.main.ui.LicenseFragment"
+        android:id="@id/license" />
+    <fragment
+        android:label="PermissionNotice"
+        android:name="com.samsung.android.game.honeyplayplus.main.ui.PermissionNoticeFragment"
+        android:id="@id/permission_notice">
+        <action
+            android:id="@id/action_permission_notice_to_main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:label="Aim Assist"
+        android:name="com.samsung.android.game.honeyplayplus.aim.ui.AimAssistFragment"
+        android:id="@id/aim_assist">
+        <action
+            android:id="@id/action_aim_assist_to_reticle_settings"
+            app:destination="@id/reticle_settings" />
+    </fragment>
+    <fragment
+        android:label="Reticle Settings"
+        android:name="com.samsung.android.game.honeyplayplus.aim.ui.ReticleSettingsFragment"
+        android:id="@id/reticle_settings" />
+    <fragment
+        android:label="Installed Games"
+        android:name="com.samsung.android.game.honeyplayplus.gamepad.touchmapping.ui.InstalledGamesFragment"
+        android:id="@id/installedGamesFragment" />
+    <fragment
+        android:label="Installed Games"
+        android:name="com.samsung.android.game.honeyplayplus.introfastforward.ui.IntroFastForwardFragment"
+        android:id="@id/introfastforwardFragment" />
+    <fragment
+        android:label="App Permissions"
+        android:name="com.samsung.android.game.honeyplayplus.main.ui.AppPermissionsFragment"
+        android:id="@id/app_permissions" />
+</navigation>

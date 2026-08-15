@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="character_counter_content_description">%1$d out of %2$d characters</string>
+    <string name="dragndroplist_drag_move">Now at position %d</string>
+    <string name="dragndroplist_drag_release">Item dropped into position %d.</string>
+    <string name="dragndroplist_drag_start">Started dragging item at position %d.</string>
+    <string name="dragndroplist_item_cannot_be_dragged">Item at position %d cannot be dragged.</string>
+    <string name="sesl_action_bar_up_description">Navigate up</string>
+    <string name="sesl_action_menu_overflow_badge_description">New content available</string>
+    <string name="sesl_action_menu_overflow_badge_text_n">N</string>
+    <string name="sesl_action_menu_overflow_description">More options</string>
+    <string name="sesl_action_mode_done">Done</string>
+    <string name="sesl_appbar_suggest_dismiss">Dismiss suggestion</string>
+    <string name="sesl_appbar_suggest_pagination">Page %1$d of %2$d</string>
+    <string name="sesl_more_item_label">More</string>
+    <string name="sesl_preferecne_badge_description">New notification</string>
+    <string name="sesl_search_hint">Search</string>
+    <string name="sesl_searchview_description_clear">Clear search field</string>
+    <string name="sesl_searchview_description_clear_field">Search field cleared</string>
+    <string name="sesl_searchview_description_search">Search</string>
+    <string name="sesl_searchview_description_submit">Submit query</string>
+    <string name="sesl_searchview_description_voice">Voice search</string>
+    <string name="sesl_switch_off">Off</string>
+    <string name="sesl_switch_on">On</string>
+    <string name="sesl_toolbar_collapse_description">Collapse</string>
+</resources>

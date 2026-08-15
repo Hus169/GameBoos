@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_ab_search"
+        android:id="@id/menu_aim_assist_search"
+        android:title="@string/search"
+        app:iconTint="@color/col_def_action_button_tint_color"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@id/menu_aim_assist_reset"
+        android:title="@string/title_reset_aim_settings" />
+</menu>

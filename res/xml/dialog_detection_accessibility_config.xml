@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service
+    android:description="@string/accessibility_service_dialog_detection_description"
+    android:settingsActivity="com.samsung.android.game.honeyplayplus.main.ui.MainActivity"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="100"
+    android:accessibilityFlags="flagIncludeNotImportantViews|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

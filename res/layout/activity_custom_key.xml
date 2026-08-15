@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/empty_space_height" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description_gamepad_remapping"
+            android:layout_marginHorizontal="@dimen/empty_space_width" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/empty_space_height" />
+        <Button
+            android:id="@id/refreshButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/refresh_custom_key"
+            android:layout_marginHorizontal="@dimen/empty_space_width" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/empty_space_height" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/cl_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="16.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_header">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rvBTList"
+                android:background="@color/hpp_main_tile_background"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

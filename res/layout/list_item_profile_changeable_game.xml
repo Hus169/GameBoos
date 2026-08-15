@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60.0dip"
+    android:layout_marginHorizontal="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/list_divider"
+        android:background="@color/col_list_border"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginHorizontal="18.0dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/iv_app_icon"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginStart="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ll_app_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_app_icon"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:ellipsize="marquee"
+            android:id="@id/tv_app_name"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            style="@style/HoneyPlayPlus.TextAppearance.Title" />
+        <TextView
+            android:textSize="12.0sp"
+            android:ellipsize="end"
+            android:id="@id/tv_profile_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            style="@style/HoneyPlayPlus.TextAppearance.Summary" />
+    </LinearLayout>
+    <com.samsung.android.game.honeyplayplus.gamepad.remapping.ui.widget.SelectedItemWidthSpinner
+        android:id="@id/sp_profile_list"
+        android:background="@drawable/bg_transparent"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18.0dip"
+        android:elevation="1.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HoneyPlayPlus.Theme.Spinner.DropDown" />
+</androidx.constraintlayout.widget.ConstraintLayout>

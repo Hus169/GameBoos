@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/splash"
+    android:background="@color/col_common_bg_color"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_gravity="center"
+        android:id="@id/animation_view"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="186.0dip"
+        android:layout_height="186.0dip"
+        app:layout_constraintBottom_toTopOf="@id/app_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/intro" />
+    <TextView
+        android:textSize="38.0sp"
+        android:textStyle="normal"
+        android:id="@id/app_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@id/app_tagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animation_view"
+        style="@style/HoneyPlayPlus.TextAppearance.Title" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textStyle="normal"
+        android:id="@id/app_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/redesign_your_galaxy"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name_text"
+        style="@style/HoneyPlayPlus.TextAppearance.Summary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

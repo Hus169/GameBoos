@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/view_divider"
+        android:background="@color/hpp_common_list_divider_color"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@id/imageGameIcon"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:src="@drawable/ic_profile_default"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.HoneyPlayPlus.GameListIcon"
+        app:strokeWidth="0.0dip" />
+    <TextView
+        android:textSize="17.0sp"
+        android:gravity="center_vertical"
+        android:id="@id/textGameName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switchGameToggle"
+        app:layout_constraintStart_toEndOf="@id/imageGameIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HoneyPlayPlus.TextAppearance.Title" />
+    <Switch
+        android:id="@id/switchGameToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

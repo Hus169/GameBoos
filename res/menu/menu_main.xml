@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/menu_main_permission"
+        android:title="@string/title_app_permissions" />
+    <item
+        android:id="@id/menu_main_information"
+        android:title="@string/main_menu_information_and_credit" />
+    <item
+        android:id="@id/menu_main_settings"
+        android:visible="false"
+        android:title="@string/settings" />
+</menu>

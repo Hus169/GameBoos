@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/col_dialog_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/cl_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/tv_app_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18.0dip"
+            android:text="@string/app_name"
+            android:paddingHorizontal="24.0dip"
+            android:paddingVertical="20.0dip"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/HoneyPlayPlus.TextAppearance.Notice_AppTitle" />
+        <androidx.core.widget.NestedScrollView
+            android:id="@id/scroll_view_permissions"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toTopOf="@id/btn_allow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_title">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_gravity="center_horizontal"
+                android:id="@id/cl_permissions"
+                android:padding="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/tv_description_welcome"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permission_welcome_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/HoneyPlayPlus.TextAppearance.Notice_description" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/tv_description_permissions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/permission_sub_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description_welcome"
+                    style="@style/HoneyPlayPlus.TextAppearance.Notice_description" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@id/cl_required_permissions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description_permissions">
+                    <include
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/layout_permissions_list" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:gravity="center"
+            android:id="@id/btn_allow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:minWidth="216.0dip"
+            android:minHeight="44.0dip"
+            android:text="@string/permission_allow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scroll_view_permissions"
+            style="@style/HoneyPlayPlus.TextAppearance.Dialog_Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

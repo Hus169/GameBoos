@@ -1,0 +1,318 @@
+.class Lorg/simpleframework/xml/stream/StreamReader$Start;
+.super Lorg/simpleframework/xml/stream/EventElement;
+.source "r8-map-id-712742338cf32bf01658c805102a278a89f033a5e38ce04f1d3b6ff0fdeb351f"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/simpleframework/xml/stream/StreamReader;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Start"
+.end annotation
+
+
+# instance fields
+.field private final element:Lx7/c;
+
+.field private final location:Lw7/c;
+
+
+# direct methods
+.method public constructor <init>(Lx7/d;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventElement;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-interface {p1}, Lx7/d;->b()Lx7/c;
+
+    .line 5
+    .line 6
+    .line 7
+    invoke-interface {p1}, Lx7/d;->c()Lw7/c;
+
+    .line 8
+    .line 9
+    .line 10
+    return-void
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+.end method
+
+
+# virtual methods
+.method public getAttributes()Ljava/util/Iterator;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Lx7/a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method
+
+.method public getLine()I
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method
+
+.method public getPrefix()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method
+
+.method public getReference()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method
+
+.method public getSource()Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    const/4 p0, 0x0
+
+    .line 2
+    return-object p0
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+.end method

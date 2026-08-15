@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/cl_reticle_settings"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ll_reticle_shape_section"
+        android:background="@color/hpp_main_tile_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/list_padding_height"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/empty_space_height"
+            android:text="@string/reticle_shape_label"
+            android:layout_marginHorizontal="@dimen/list_padding_width"
+            style="@style/HoneyPlayPlus.TextAppearance.Title" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/rv_reticle_shapes"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/list_padding_width" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ll_reticle_settings_group_size_stroke_width"
+        android:background="@color/hpp_main_tile_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/empty_space_height_wide"
+        app:layout_constraintTop_toBottomOf="@id/ll_reticle_shape_section">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ll_size_slider_card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/list_padding_width"
+            android:paddingVertical="@dimen/list_padding_height">
+            <TextView
+                android:textStyle="bold"
+                android:id="@id/tv_size_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/empty_space_height_description"
+                android:text="@string/reticle_size"
+                style="@style/HoneyPlayPlus.TextAppearance.Title" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="7.0dip"
+                android:paddingBottom="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="22.0dip">
+                <ImageButton
+                    android:id="@id/btn_size_decrease"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_minus"
+                    android:contentDescription="@string/size_decrease" />
+                <androidx.appcompat.widget.SeslSeekBar
+                    android:id="@id/slider_reticle_size"
+                    android:layout_width="0.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_weight="1.0" />
+                <ImageButton
+                    android:id="@id/btn_size_increase"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_plus"
+                    android:contentDescription="@string/size_increase" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:background="@color/col_list_border"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginHorizontal="@dimen/list_padding_width" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ll_stroke_slider_card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/list_padding_width"
+            android:paddingVertical="@dimen/list_padding_height">
+            <TextView
+                android:textStyle="bold"
+                android:id="@id/tv_stroke_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/empty_space_height"
+                android:text="@string/reticle_stroke_width"
+                style="@style/HoneyPlayPlus.TextAppearance.Title" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="7.0dip"
+                android:paddingBottom="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="22.0dip">
+                <ImageButton
+                    android:id="@id/btn_stroke_decrease"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_minus"
+                    android:contentDescription="@string/stroke_decrease" />
+                <androidx.appcompat.widget.SeslSeekBar
+                    android:id="@id/slider_reticle_stroke"
+                    android:layout_width="0.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_weight="1.0" />
+                <ImageButton
+                    android:id="@id/btn_stroke_increase"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_plus"
+                    android:contentDescription="@string/stroke_increase" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ll_reticle_settings_group_color_opacity"
+        android:background="@color/hpp_main_tile_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/empty_space_height_wide"
+        app:layout_constraintTop_toBottomOf="@id/ll_reticle_settings_group_size_stroke_width">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ll_reticle_color_section"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/list_padding_height">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16.0dip"
+                android:text="@string/reticle_color_label"
+                android:layout_marginHorizontal="@dimen/list_padding_width"
+                style="@style/HoneyPlayPlus.TextAppearance.Title" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rv_reticle_colors"
+                android:clipToPadding="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/list_padding_width" />
+        </LinearLayout>
+        <View
+            android:background="@color/col_list_border"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginHorizontal="@dimen/list_padding_width" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ll_opacity_slider_card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/list_padding_width"
+            android:paddingVertical="@dimen/list_padding_height">
+            <TextView
+                android:id="@id/tv_opacity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/empty_space_height_description"
+                android:text="@string/reticle_opacity"
+                style="@style/HoneyPlayPlus.TextAppearance.Title" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="7.0dip"
+                android:paddingBottom="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="22.0dip">
+                <ImageButton
+                    android:id="@id/btn_opacity_decrease"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_minus"
+                    android:contentDescription="@string/opacity_decrease" />
+                <androidx.appcompat.widget.SeslSeekBar
+                    android:id="@id/slider_reticle_opacity"
+                    android:layout_width="0.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_weight="1.0" />
+                <ImageButton
+                    android:id="@id/btn_opacity_increase"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/ic_plus"
+                    android:contentDescription="@string/opacity_increase" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

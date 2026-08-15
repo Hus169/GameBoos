@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/border"
+    android:padding="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_list_selector"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/controllerIcon"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="12.0dip">
+        <TextView
+            android:textSize="18.0sp"
+            android:id="@id/deviceName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:id="@id/chkicon"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip" />
+    <Switch
+        android:id="@id/toggleBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

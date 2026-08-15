@@ -1,0 +1,15 @@
+.class public interface abstract Ls8/r;
+.super Ljava/lang/Object;
+.source "r8-map-id-712742338cf32bf01658c805102a278a89f033a5e38ce04f1d3b6ff0fdeb351f"
+
+# interfaces
+.implements Ls8/s;
+.implements Lm8/b;
+
+
+# virtual methods
+.method public abstract b()Ls8/q;
+.end method
+
+.method public abstract get(Ljava/lang/Object;)Ljava/lang/Object;
+.end method

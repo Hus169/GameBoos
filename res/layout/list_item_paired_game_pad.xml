@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+    android:layout_marginHorizontal="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/list_divider"
+        android:background="@color/col_list_border"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginHorizontal="18.0dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/iv_device_icon"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:contentDescription="game pad icon"
+        android:layout_marginStart="18.0dip"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:ellipsize="marquee"
+        android:id="@id/tv_device_name"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.5dip"
+        android:layout_marginBottom="16.5dip"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_device_next"
+        app:layout_constraintStart_toEndOf="@id/iv_device_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HoneyPlayPlus.TextAppearance.Title" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/iv_device_next"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:src="@drawable/ic_next_handle"
+        android:tint="@color/col_list_next"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

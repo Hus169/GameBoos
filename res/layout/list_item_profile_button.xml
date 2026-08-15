@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/cl_main_switch"
+        android:background="?selectableItemBackground"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/iv_button_icon"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_button_icon"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@id/tv_key_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/HoneyPlayPlus.TextAppearance.List_MainText" />
+            <TextView
+                android:textColor="@color/hpp_common_text_summary_color"
+                android:id="@id/tv_selected_key_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/HoneyPlayPlus.TextAppearance.Subheader" />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@id/sp_key_list"
+            android:background="@drawable/bg_transparent"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/HoneyPlayPlus.Theme.Spinner.DropDown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/cl_additional_switch"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cl_main_switch">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/cl_switch_inverse_horizontal"
+            android:background="?selectableItemBackground"
+            android:padding="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52.0dip"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@id/tv_title_inverse_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamepad_inverse_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@id/sw_inverse_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/cl_switch_inverse_vertical"
+            android:background="?selectableItemBackground"
+            android:padding="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52.0dip"
+            app:layout_constraintTop_toBottomOf="@id/cl_switch_inverse_horizontal">
+            <TextView
+                android:id="@id/tv_title_inverse_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamepad_inverse_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@id/sw_inverse_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/cl_switch_inverse_rotation"
+            android:background="?selectableItemBackground"
+            android:padding="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52.0dip"
+            app:layout_constraintTop_toBottomOf="@id/cl_switch_inverse_vertical">
+            <TextView
+                android:id="@id/tv_title_inverse_rot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gamepad_inverse_rotation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@id/sw_inverse_rot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@id/fl_content_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/dialog_radius_background"
+            android:padding="@dimen/profile_dialog_margin"
+            android:fitsSystemWindows="true"
+            android:layout_width="340.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:maxWidth="340.0dip">
+            <TextView
+                android:id="@id/dialog_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"
+                android:layout_marginBottom="12.0dip"
+                android:maxHeight="50.0dip"
+                android:layout_marginStart="24.0dip"
+                android:layout_marginEnd="24.0dip"
+                style="@style/HoneyPlayPlus.TextAppearance.Dialog_Title" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@id/profile_name_et"
+                android:paddingTop="18.0dip"
+                android:paddingBottom="18.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="150.0dip"
+                android:hint="@string/set_profile_name"
+                android:maxLength="15"
+                android:paddingStart="18.0dip"
+                android:paddingEnd="18.0dip"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginEnd="8.0dip"
+                app:boxStrokeColor="@color/col_dialog_hint_line"
+                app:boxStrokeWidth="2.0dip"
+                style="@style/HoneyPlayPlus.TextAppearance.Dialog_Field" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip">
+                <Button
+                    android:id="@id/profile_cancel_btn"
+                    android:background="@android:color/transparent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12.0dip"
+                    android:foreground="@drawable/ripple_list_selector"
+                    android:text="@string/profile_cancel"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="24.0dip" />
+                <View
+                    android:background="@color/col_dialog_separator"
+                    android:layout_width="1.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_marginTop="11.0dip"
+                    android:layout_marginStart="12.0dip" />
+                <Button
+                    android:id="@id/profile_ok_btn"
+                    android:background="@android:color/transparent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12.0dip"
+                    android:foreground="@drawable/ripple_list_selector"
+                    android:text="@string/profile_ok"
+                    android:layout_weight="1.0"
+                    android:paddingStart="12.0dip"
+                    android:paddingEnd="12.0dip"
+                    android:layout_marginStart="12.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

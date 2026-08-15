@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="56.0dip"
+    android:layout_marginHorizontal="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/list_divider"
+        android:background="@color/col_list_border"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginHorizontal="18.0dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/iv_profile_icon"
+        android:background="@drawable/circle_profile_background"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:scaleType="centerCrop"
+        android:contentDescription="profile icon"
+        android:layout_marginStart="18.0dip"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/iv_profile_icon_over"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:scaleType="centerInside"
+        android:contentDescription="profile icon"
+        android:alpha="0.85"
+        android:layout_marginStart="18.0dip"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:ellipsize="end"
+        android:id="@id/tv_profile_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.5dip"
+        android:layout_marginBottom="16.5dip"
+        android:text="@string/default_profile"
+        android:maxLines="1"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cl_edit_handle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/HoneyPlayPlus.TextAppearance.Title" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/cl_edit_handle"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="18.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_profile_name">
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/col_list_next"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:id="@id/tv_edit_title"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:maxLines="1"
+            android:layout_marginEnd="4.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_edit_handle"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/iv_edit_handle"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:src="@drawable/ic_next_handle"
+            android:tint="@color/col_list_next"
+            android:contentDescription="Edit this profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
